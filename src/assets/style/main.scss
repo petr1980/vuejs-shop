@@ -44,3 +44,13 @@ body {
 .fade-leave-to {
   opacity: 0;
 }
+
+
+.route-enter-active,
+.route-leave-active {
+  transition: opacity 0.3s;
+}
+.route-enter,
+.route-leave-to {
+  opacity: 0;
+}

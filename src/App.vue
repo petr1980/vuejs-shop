@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <the-header/>
-    <router-view/>
+
+    <transition name="route" mode="out-in" appear>
+      <router-view/>
+    </transition>
     <the-footer/>
   </div>
 </template>
