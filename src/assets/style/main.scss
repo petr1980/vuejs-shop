@@ -1,0 +1,46 @@
+@import './normalise.scss';
+@import './mixins.scss';
+
+html {
+  font-size: 18px;
+  @media(max-width: 900px) {
+    font-size: 16px;
+  }
+}
+body {
+  padding-top:3.4rem;
+}
+#app {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 180px;
+  font-family: 'Source Sans Pro', sans-serif;
+  box-sizing: border-box;
+  h1 {
+    margin: 1rem 0;
+    @media(max-width: 500px) {
+      font-size:1.7rem;
+    }
+  }
+}
+
+.btns-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .btn {
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

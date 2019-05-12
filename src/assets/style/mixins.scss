@@ -1,0 +1,22 @@
+@mixin btn($h:30px) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 140px;
+    height:$h;
+    padding: 0 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid #e8cdce;
+    border-radius: 30px;
+    text-decoration: none;
+    line-height: 1;
+    transition: border 0.3s, color 0.3s;
+    &:hover {
+      border-color:#a41d21;
+      color: #a41d21;
+    }
+}
+

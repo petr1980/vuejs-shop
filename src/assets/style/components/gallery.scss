@@ -1,0 +1,123 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+	font-size: 16px;
+  [type="text"] {
+    width: 250px;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #e8cdce;
+    border-radius: 30px;
+    background: #fff;
+    outline: none;
+    &:focus {
+      border-color: green;
+    }
+  }
+  [type="submit"] {
+    margin-left: 5px;
+    background: #fff;
+    outline: none;
+    @include btn();
+	}
+	@media (max-width: 400px) {
+		flex-direction: column;
+		[type="submit"], [type="text"] {
+			width: 100%;
+    }
+    [type="text"] {
+			margin-bottom: 20px;
+    }
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  transition: opacity .8s;
+  &.load {opacity: .7;}
+  &_item {
+    width: 20%;
+    padding: 0 2px 4px;
+    @media (max-width: 1200px) {
+      width: 25%;
+    }
+    @media (max-width: 960px) {
+      width: 33.3333%;
+    }
+    @media (max-width: 600px) {
+      width: 50%;
+    }
+    @media (max-width: 480px) {
+      width: 100%;
+      margin: 0 0 4px;
+    }
+  }
+  &_wrap {
+    position: relative;
+  }
+  &_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160px;
+		padding: 10px;
+    border: 1px solid #ccc;
+  }
+  &_title {
+    margin: 0 0 10px;
+		font-size: .9rem;
+  }
+  &_img {
+    padding-bottom: 70%;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .btn {
+    display: block;
+    flex-shrink: 0;
+    flex-grow: inherit;
+    &:last-child {
+      margin-left: auto;
+    }
+    
+  }
+}
+
+.more-btn {
+  @include btn(40px);
+	width: 300px;
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.empty {
+	padding: 0px 15px 30px;
+	font-size: 1.2rem;
+  text-align: center;
+}
+.loading {
+	padding: 30px 0;
+  text-align: center;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #e8cdce;
+    border-radius: 50%;
+    animation: loading 2s linear infinite;
+  }
+}
+
+@keyframes loading {
+  100% {
+    transform: scale(2); 
+    opacity: 0;
+  }
+}
