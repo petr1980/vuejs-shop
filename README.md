@@ -1,5 +1,5 @@
 # E-shop test
-
+```
 # demo: https://vuetestshop.herokuapp.com/#/
 
 
@@ -27,4 +27,3 @@ npm run test
 ```
 npm run lint
 ```
- 
