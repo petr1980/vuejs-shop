@@ -1,6 +1,6 @@
 # E-shop test
-```
-# demo: https://vuetestshop.herokuapp.com/#/
+
+### demo: https://vuetestshop.herokuapp.com/#/
 
 
 ## Project setup
